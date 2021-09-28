@@ -1,5 +1,4 @@
 import os
-import numpy as np
 import xlwt
 import pandas as pd
 class HashTable(object):
