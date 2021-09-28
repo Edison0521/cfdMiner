@@ -1,0 +1,30 @@
+Usage:
+	GcGrowth data_filename min_sup(an obsolute number) [output_filename]
+
+
+data_filename: Each line represents an object with a set of attributes 
+               (integers) seperated by space, or a transaction containing
+               a set of items. See sample input file "mushroom.dat".  
+
+
+min_sup: the minimum support threshold, it is an integer. 
+
+
+Output_filename: three files are generated. If the output_filename is 
+                 "pat", then the three files are "pat.closed", "pat.key"
+                 and "pat.pair". File "pat.key" contains the generators. 
+                 Its format is as follows: every line represents a generator.
+                 The first integer is the length of the generator, i.e.,
+                 the number of items contained in the generator. The 
+                 following integers are the set of items contained in 
+                 the generator. The last integer is the support of the itemset.
+                 The format of the "pat.closed" is the same as that of "pat.key".
+                 File "pat.pair" contains information that links generators and 
+                 closed patterns in the same equivalent class together. Each line
+                 contain a pair of ids. The first id is a generator id and 
+                 the second id is the id of the closed pattern that is in the same
+                 equivalent class as the generator. For generators and closed
+                 patterns, their ids are their line no in the corresponding file. 
+
+Example: GcGrowth mushroom.txt 81 pat
+
