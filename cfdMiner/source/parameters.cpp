@@ -8,8 +8,8 @@ CParameters goparameters;
 
 void CParameters::SetResultName(char *szresult_name)
 {
-	sprintf(szgenerator_filename, "%s.key", szresult_name);
-	sprintf(szclosed_filename, "%s.closed", szresult_name);
-	sprintf(szpair_filename, "%s.pair", szresult_name);
+	sprintf(szgenerator_filename, "%s.key.txt", szresult_name);
+	sprintf(szclosed_filename, "%s.closed.txt", szresult_name);
+	sprintf(szpair_filename, "%s.pair.txt", szresult_name);
 }
 

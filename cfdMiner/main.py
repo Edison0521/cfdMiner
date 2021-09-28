@@ -8,6 +8,7 @@ if __name__ == '__main__':
     Dom_attrs = [] #将表头的一行作为属性值的集合存入其中
     Sub_attr = [] #存储每一列中的属性的具体的值
     Sub_attrs = [] #将所有具体的值存储成一个列表
+    k = 3
     attrs = pd.read_csv('1.csv')
     df = pd.DataFrame(attrs)
     Dom_attrs = df.columns.tolist()
@@ -16,7 +17,7 @@ if __name__ == '__main__':
     for i in range(len(Sub_attr)):
         Sub_attrs.append(Sub_attr[i])
     g = Gcgrowth()
-    k = g.gcgrowth(Dom_attrs,Sub_attrs,df)
-    #print(k)
+    k = g.gcgrowth(Dom_attrs,Sub_attrs,df,k)
+
 
 
